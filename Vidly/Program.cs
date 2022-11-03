@@ -37,13 +37,6 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-//app.MapControllerRoute(
-//    name: "MoviesByReleaseDate",
-//    pattern: "movies/released/{year}/{month}",
-//    defaults: new { controller = "Movies", action = "ByReleaseDate" },
-//    //Use regex to allow only 4 digits for year and 2 for month
-//    constraints: new { year = @"\d{4}", month = @"\d{2}"}
-//    );
 
 app.MapControllerRoute(
     name: "MoviesByReleaseDate",
