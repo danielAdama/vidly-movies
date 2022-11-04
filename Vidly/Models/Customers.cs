@@ -1,6 +1,6 @@
 ﻿namespace Vidly.Models
 {
-    public class Customer : BaseEntity
+    public class Customers : BaseEntity
     {
 
     }
