@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Vidly.Models;
+using Vidly.ViewModel;
 
 namespace Vidly.Controllers
 {
@@ -8,8 +9,20 @@ namespace Vidly.Controllers
         [HttpGet]
         public IActionResult Random()
         {
-            var movie = new Movie() { Name = "Shrek" };
-            return View(movie);
+            Movie movie = new Movie() { Name = "Shrek" };
+            var customers = new List<Customers>()
+            {
+                new Customers {Name = "Customer1"},
+                new Customers {Name = "Customer2"}
+            };
+
+            RandomMovieViewModel viewModel = new RandomMovieViewModel() 
+            {
+                Movie = movie,
+                Customers = customers
+            };
+
+            return View(viewModel);
         }
 
         [HttpGet]
